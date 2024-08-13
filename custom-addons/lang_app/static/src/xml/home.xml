@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+
+    <t t-name="LearningAppHome" owl="1">
+        <div id="lang_app_home" style="display: flex; flex-direction: column;">
+            <Header/>
+            <Body/>
+        </div>
+    </t>
+
+</templates>

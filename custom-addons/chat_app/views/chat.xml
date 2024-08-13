@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_chat_app_chat_form" model="ir.ui.view">
+        <field name="name">chat.app.chat.form</field>
+        <field name="model">chat.app.chat</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="title" readonly="1"/>
+                        </h1>
+                    </div>
+
+                    <group>
+                        <field name="title"/>
+                        <field name="user_id"/>
+                        <field name="message_len"/>
+                    </group>
+
+                    <notebook>
+                        <page string="Messages" name="message_ids">
+                            <field name="message_ids" />
+                        </page>
+                    </notebook>
+
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="message_ids" options="{'post_refresh': 'recipients'}"/>
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_chat_app_chat_tree" model="ir.ui.view">
+        <field name="name">chat.app.chat.tree</field>
+        <field name="model">chat.app.chat</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="title"/>
+                <field name="user_id"/>
+                <field name="message_len"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_chat_app_chat_search" model="ir.ui.view">
+        <field name="name">chat.app.chat.search</field>
+        <field name="model">chat.app.chat</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="title"/>
+                <field name="user_id"/>
+                <field name="message_len"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_chat_app_chat" model="ir.actions.act_window">
+        <field name="name">Chat</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">chat.app.chat</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_chat_app_chat"
+            name="Chat" 
+            parent="menu_operations"
+            action="action_chat_app_chat"
+            sequence="10"/>
+
+</odoo>

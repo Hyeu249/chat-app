@@ -1,0 +1,101 @@
+.flex {
+    display: flex;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-column-between {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main-chat-app {
+    display: flex;
+    min-width: 600px;
+    min-height: 370px;
+    box-sizing: border-box;
+    border: 1px solid #dedede;
+    box-shadow: 50px 50px 100px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.icon-button {
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid #dedede;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    user-select: none;
+}
+
+.icon-button:hover {
+    background-color: #f3f3f3 !important;
+    border-color: #00b3b3;
+}
+
+.shadow-button {
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.05);
+    border: none;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #0000001a;
+    border-radius: 8px;
+}
+
+.scroll {
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+.textarea-chat {
+    font-size: 14px;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: rgba(0, 0, 0, 0.03) 0px -2px 5px;
+    padding: 10px 90px 10px 14px;
+    resize: none;
+    outline: none;
+    box-sizing: border-box;
+    min-height: 68px;
+}
+
+.send-button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #1d93ab;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    user-select: none;
+    transition: all 0.3s ease;
+}
+
+.send-button:hover {
+    background-color: #196777;
+}

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_chat_app_settings_form" model="ir.ui.view">
+        <field name="name">res.config.settings.view.chat.app</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="90"/>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('settings')]" position="inside">
+
+                <div class="app_settings_block" data-string="Techno Chat App" id="chat_app" string="Techno Chat App" data-key="chat_app">
+                    <h2>Techno Chat App</h2>
+                    <div class="row mt16 o_settings_container" id="ship_management_setting">
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane"/>
+                            <div class="o_setting_right_pane">
+                                <span class="o_form_label">Chat app settings</span>
+                                <div class="text-muted content-group mt16" style="display:flex;">
+                                    <div style="min-width: 100px">Name</div>
+                                    <field name="name"/>
+                                </div>
+                                <div class="text-muted content-group mt12" style="display:flex;">
+                                    <div style="min-width: 100px">Description</div>
+                                    <field name="description"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </xpath>
+        </field>
+    </record>
+
+    <record id="action_chat_app_settings" model="ir.actions.act_window">
+        <field name="name">Tele config settings</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.config.settings</field>
+        <field name="view_mode">form</field>
+        <field name="target">inline</field>
+        <field name="context">{'module' : 'chat_app', 'bin_size': False}</field>
+    </record>
+
+    <menuitem id="menu_chat_app_settings"
+        name="Settings"
+        parent="menu_operations"
+        action="action_chat_app_settings"
+        sequence="110"/>
+
+</odoo>

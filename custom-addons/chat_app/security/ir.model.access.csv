@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+chat_app.access_chat_app_chat_for_admin,access_chat_app_chat_for_admin,chat_app.model_chat_app_chat,chat_app.group_chat_app_admin,1,1,1,1
+chat_app.access_chat_app_message_for_admin,access_chat_app_message_for_admin,chat_app.model_chat_app_message,chat_app.group_chat_app_admin,1,1,1,1
+
+chat_app.access_chat_app_chat_for_user,access_chat_app_chat_for_user,chat_app.model_chat_app_chat,chat_app.group_chat_app_subscriber,1,1,1,1
+chat_app.access_chat_app_message_for_user,access_chat_app_message_for_user,chat_app.model_chat_app_message,chat_app.group_chat_app_subscriber,1,1,1,1
